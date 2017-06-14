@@ -7,8 +7,6 @@
 
 import sys
 import urllib.request
-#import json
-#import textwrap
 from html.parser import HTMLParser
 
 # Class inherits for HTMLParser and redefines handle start tag
@@ -94,14 +92,9 @@ def cleanStr(str):
 		if(val == 32):
 			str =str.replace(eachItem,'_')
 		
-		elif( val >=34 and val <= 47):
+		elif( val >=33 and val <= 47):
 			
-			if(val == 39 or val ==36 or val == 38):
-				continue	
-				
-	
-			else:
-				str= str.replace(eachItem, '')
+			str= str.replace(eachItem, '')
 		
 		elif(val >=58 and val <=64 ):
 			str= str.replace(eachItem, '')
